@@ -1,0 +1,47 @@
+/* MainPage */
+.main-page {
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #397f80;
+  z-index: 1;
+}
+/* ToggleButton */
+.toggle-button {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  box-shadow: 5px 5px 10px #00000063 !important;
+}
+.toggle-button:active {
+  box-shadow: unset !important;
+}
+/* SideBar */
+.sidebar {
+  position: absolute;
+  top: 0px;
+  left: -300px;
+  height: 100%;
+  width: 300px;
+  background-color: grey;
+  transition: left .3s ease-in-out;
+}
+.sidebar.open {
+  left: 0;
+  box-shadow: 0 0 20px black;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
